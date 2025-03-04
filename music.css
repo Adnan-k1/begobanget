@@ -41,6 +41,7 @@ h2 {
     border-bottom: 1px solid #ddd;
     transition: background 0.3s;
     cursor: pointer;
+    position: relative;
 }
 
 .song:hover {
@@ -70,12 +71,6 @@ h2 {
     color: gray;
 }
 
-.song-duration {
-    font-size: 14px;
-    color: gray;
-    margin-right: 10px;
-}
-
 .play-button {
     background: none;
     border: none;
@@ -86,6 +81,25 @@ h2 {
 
 .play-button:hover {
     color: #0056b3;
+}
+
+/* AUDIO PLAYER FIXED DI BAWAH */
+.audio-player-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#audio-player {
+    width: 90%;
+    max-width: 600px;
 }
 
 /* Responsif untuk HP */
@@ -100,12 +114,11 @@ h2 {
         align-items: flex-start;
     }
 
-    .song img {
-        width: 60px;
-        height: 60px;
+    .audio-player-container {
+        padding: 5px;
     }
 
-    .song-duration {
-        align-self: flex-end;
+    #audio-player {
+        width: 95%;
     }
 }
